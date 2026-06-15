@@ -1,4 +1,4 @@
-let currsong = new Audio("https://raw.githubusercontent.com/bhavyvaghani829-beep/music-library/main/song2.mp3");
+let currsong = new Audio("https://raw.githubusercontent.com/bhavyvaghani829-beep/spotify-clone/main/song2.mp3");
 let currentSongIndex = 1;
 let currentCollection = null; // Track which collection is playing
 
@@ -18,55 +18,55 @@ async function main() {
     dhurandhar: {
       1: {
         name: "Ishq",
-        url: "https://raw.githubusercontent.com/bhavyvaghani829-beep/music-library/main/Aakhri Ishq Dhurandhar The Revenge 320 Kbps.mp3"
+        url: "https://raw.githubusercontent.com/bhavyvaghani829-beep/spotify-clone/main/songs/Aakhri Ishq Dhurandhar The Revenge 320 Kbps.mp3"
       },
       2: {
         name: "Destiny Mann Atkeya",
-        url: "https://raw.githubusercontent.com/bhavyvaghani829-beep/music-library/main/Destiny Mann Atkeya Dhurandhar The Revenge 320 Kbps.mp3"
+        url: "https://raw.githubusercontent.com/bhavyvaghani829-beep/spotify-clone/main/songs/Destiny Mann Atkeya Dhurandhar The Revenge 320 Kbps.mp3"
       },
       3: {
         name: "Hum Pyaar Karne Wale",
-        url: "https://raw.githubusercontent.com/bhavyvaghani829-beep/music-library/main/Hum Pyaar Karne Wale Dhurandhar The Revenge 320 Kbps.mp3"
+        url: "https://raw.githubusercontent.com/bhavyvaghani829-beep/spotify-clone/main/songs/Hum Pyaar Karne Wale Dhurandhar The Revenge 320 Kbps.mp3"
       },
       4: {
         name: "Main Aur Tu",
-        url: "https://raw.githubusercontent.com/bhavyvaghani829-beep/music-library/main/Main Aur Tu Dhurandhar The Revenge 320 Kbps.mp3"
+        url: "https://raw.githubusercontent.com/bhavyvaghani829-beep/spotify-clone/main/songs/Main Aur Tu Dhurandhar The Revenge 320 Kbps.mp3"
       },
       5: {
         name: "Phir se",
-        url: "https://raw.githubusercontent.com/bhavyvaghani829-beep/music-library/main/Phir Se Dhurandhar The Revenge 320 Kbps.mp3"
+        url: "https://raw.githubusercontent.com/bhavyvaghani829-beep/spotify-clone/main/songs/Phir Se Dhurandhar The Revenge 320 Kbps.mp3"
       }
     },
     sultan: {
       1: {
         name: "Baby ko Bass Pasand Hai",
-        url: "https://raw.githubusercontent.com/bhavyvaghani829-beep/music-library/main/Baby Ko Bass Pasand Hai Sultan 320 Kbps.mp3"
+        url: "https://raw.githubusercontent.com/bhavyvaghani829-beep/spotify-clone/main/songs/Baby Ko Bass Pasand Hai Sultan 320 Kbps.mp3"
       },
       2: {
         name: "440 Volt",
-        url: "https://raw.githubusercontent.com/bhavyvaghani829-beep/music-library/main/440 Volt Sultan 320 Kbps.mp3"
+        url: "https://raw.githubusercontent.com/bhavyvaghani829-beep/spotify-clone/main/songs/440 Volt Sultan 320 Kbps.mp3"
       },
       3: {
         name: "Bulleya",
-        url: "https://raw.githubusercontent.com/bhavyvaghani829-beep/music-library/main/Bulleya Sultan 320 Kbps.mp3"
+        url: "https://raw.githubusercontent.com/bhavyvaghani829-beep/spotify-clone/main/songs/Bulleya Sultan 320 Kbps.mp3"
       },
       4: {
         name: "Jag Ghoomeya",
-        url: "https://raw.githubusercontent.com/bhavyvaghani829-beep/music-library/main/Jag Ghoomeya Sultan 320 Kbps.mp3"
+        url: "https://raw.githubusercontent.com/bhavyvaghani829-beep/spotify-clone/main/songs/Jag Ghoomeya Sultan 320 Kbps.mp3"
       },
       5: {
         name: "Sultan",
-        url: "https://raw.githubusercontent.com/bhavyvaghani829-beep/music-library/main/Sultan Sukhwinder Singh 320 Kbps.mp3"
+        url: "https://raw.githubusercontent.com/bhavyvaghani829-beep/spotify-clone/main/songs/Sultan Sukhwinder Singh 320 Kbps.mp3"
       },
       6: {
         name: "Tuk Tuk",
-        url: "https://raw.githubusercontent.com/bhavyvaghani829-beep/music-library/main/Tuk Tuk Sultan 320 Kbps.mp3"
+        url: "https://raw.githubusercontent.com/bhavyvaghani829-beep/spotify-clone/main/songs/Tuk Tuk Sultan 320 Kbps.mp3"
       }
     },
     pavazhamalli: {
       1: {
         name: "Pavazha Malli",
-        url: "https://raw.githubusercontent.com/bhavyvaghani829-beep/music-library/main/Pavazha Malli Sai Abhyankkar 320 Kbps.mp3"
+        url: "https://raw.githubusercontent.com/bhavyvaghani829-beep/spotify-clone/main/songs/Pavazha Malli Sai Abhyankkar 320 Kbps.mp3"
       }
     }
   }
@@ -101,21 +101,21 @@ async function main() {
       const e = songData[k];
       if (a == 1) {
         songul.innerHTML = ` <li data-url="${e.url}">
-          <img class="invert" src="spotify/img/music.svg" alt="">
+          <img class="invert" src="img/music.svg" alt="">
           <div class="info first">${e.name}</div>
           <div class="playnow">
             <div>playnow</div>
-            <img src="spotify/img/play.svg" class="invert" alt="">
+            <img src="img/play.svg" class="invert" alt="">
           </div>
         </li>`
         a++;
       } else {
         songul.innerHTML += ` <li data-url="${e.url}">
-          <img class="invert" src="spotify/img/music.svg" alt="">
+          <img class="invert" src="img/music.svg" alt="">
           <div class="info">${e.name}</div>
           <div class="playnow">
             <div>playnow</div>
-            <img src="spotify/img/play.svg" class="invert" alt="">
+            <img src="img/play.svg" class="invert" alt="">
           </div>
         </li>`
       }
@@ -131,12 +131,12 @@ async function main() {
 
     if (pause) {
       currsong.play();
-      document.getElementById("play").src = "spotify/img/pause.svg"
+      document.getElementById("play").src = "img/pause.svg"
       document.querySelector(".songinfo").innerHTML = `${document.querySelector(".first").innerHTML}`
     }
     currsong.src = s.dataset.url;
     currsong.play();
-    document.getElementById("play").src = "spotify/img/pause.svg"
+    document.getElementById("play").src = "img/pause.svg"
     document.querySelector(".songinfo").innerHTML = `${s.querySelector(".info").innerHTML}`
   }
 
@@ -144,13 +144,13 @@ async function main() {
     document.getElementById("play").addEventListener("click", () => {
       if (currsong.paused) {
         currsong.play();
-        document.getElementById("play").src = "spotify/img/pause.svg"
+        document.getElementById("play").src = "img/pause.svg"
         if (document.querySelector(".songinfo").innerHTML === "") {
           document.querySelector(".songinfo").innerHTML = `${document.querySelector(".first").innerHTML}`
         }
       } else {
         currsong.pause();
-        document.getElementById("play").src = "spotify/img/play.svg"
+        document.getElementById("play").src = "img/play.svg"
       }
     })
   }
