@@ -1,4 +1,4 @@
-let currsong = new Audio("https://raw.githubusercontent.com/bhavyvaghani829-beep/spotify-clone/main/song2.mp3");
+let currsong = new Audio("https://raw.githubusercontent.com/bhavyvaghani829-beep/spotify-clone/main/Aakhri Ishq Dhurandhar The Revenge 320 Kbps.mp3");
 let currentSongIndex = 1;
 let currentCollection = null; // Track which collection is playing
 
