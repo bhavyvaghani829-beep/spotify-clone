@@ -91,7 +91,7 @@ async function main() {
       return;
     }
 
-    let songul = document.querySelector(".songlist ul");
+    let songul = document.querySelector(".songList ul");
     songul.innerHTML = ""; // Clear previous songs
     let a = 1;
 
@@ -126,7 +126,7 @@ async function main() {
   }
 
   const playmusic = (s, pause = false) => {
-    const allLis = Array.from(document.querySelector(".songlist").getElementsByTagName("li"));
+    const allLis = Array.from(document.querySelector(".songList").getElementsByTagName("li"));
     currentSongIndex = allLis.indexOf(s) + 1;
 
     if (pause) {
@@ -157,14 +157,14 @@ async function main() {
 
   // ✅ FIX: Use event delegation to avoid duplicate listeners
   const play = () => {
-    const songlist = document.querySelector(".songlist ul");
+    const songlist = document.querySelector(".songList ul");
     
     // Remove old listeners by cloning
     const newSonglist = songlist.cloneNode(true);
     songlist.parentNode.replaceChild(newSonglist, songlist);
     
     // Add new listener using event delegation (one listener for all)
-    document.querySelector(".songlist ul").addEventListener("click", (e) => {
+    document.querySelector(".songList ul").addEventListener("click", (e) => {
       const li = e.target.closest("li");
       if (li) {
         playmusic(li);
@@ -203,7 +203,7 @@ async function main() {
       }
 
       // Find the corresponding li element and play it
-      const allLis = Array.from(document.querySelector(".songlist").getElementsByTagName("li"));
+      const allLis = Array.from(document.querySelector(".songList").getElementsByTagName("li"));
       const nextLi = allLis[currentSongIndex - 1];
 
       playmusic(nextLi);
@@ -212,7 +212,7 @@ async function main() {
 
   // ==================== PREVIOUS BUTTON ====================
   const playPrevious = () => {
-    document.getElementById("pre").addEventListener("click", () => {
+    document.getElementById("previous").addEventListener("click", () => {
       if (!currentCollection) return;
 
       const currentCollectionData = songCollections[currentCollection];
@@ -226,7 +226,7 @@ async function main() {
       }
 
       // Find the corresponding li element and play it
-      const allLis = Array.from(document.querySelector(".songlist").getElementsByTagName("li"));
+      const allLis = Array.from(document.querySelector(".songList").getElementsByTagName("li"));
       const prevLi = allLis[currentSongIndex - 1];
 
       playmusic(prevLi);
